@@ -1,0 +1,77 @@
+POST http://localhost:10000/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "requestId": 1,
+  "value": "200 PLN"
+}
+
+###
+
+GET http://localhost:10000/payments/03491ead-55fc-4e14-8160-13b1f675caa6
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:10000/payments/confirmed?pageSize=2&pageNumber=0
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST http://localhost:10000/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "entries": {
+    "1": 2
+  }
+}
+
+###
+
+GET http://localhost:8888/002-Config-Discovery-Gateway-servers/application-default.yml
+
+###
+
+GET http://localhost:8888/002-Config-Discovery-Gateway-servers/application-default.properties
+
+###
+
+GET http://localhost:8888/002-Config-Discovery-Gateway-servers/application-development.yml
+
+###
+
+GET http://localhost:8888/002-Config-Discovery-Gateway-servers/shop-service-default.yml
+
+###
+
+GET http://localhost:8888/002-Config-Discovery-Gateway-servers/shop-service-development.yml
+
+###
+
+POST http://localhost:8080/api/shop/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "requestId": 1,
+  "value": "200 PLN"
+}
+
+###
+
+POST http://localhost:8080/api/shop/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "entries": {
+    "1": 2
+  }
+}
