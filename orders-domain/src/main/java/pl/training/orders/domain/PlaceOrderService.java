@@ -26,6 +26,7 @@ class PlaceOrderService {
         var payment = paymentService.pay(paymentValue, DEFAULT_CURRENCY, emptyMap());
         log.info("New order: " + orderDomain);
         log.info("New order payment: " + payment);
+        log.info("Order total value: " + totalValue);
     }
 
 }
