@@ -10,9 +10,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import pl.training.warehouse.adapters.persistence.jpa.JpaProductRepository;
 import pl.training.warehouse.adapters.persistence.jpa.ProductEntity;
 import pl.training.warehouse.domain.DefaultProductServiceFactory;
-import pl.training.warehouse.ports.GetProductUseCase;
-import pl.training.warehouse.ports.ProductReader;
-import pl.training.warehouse.ports.ProductServiceFactory;
+import pl.training.warehouse.domain.InvalidateProductsService;
+import pl.training.warehouse.ports.*;
 
 import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
@@ -27,6 +26,11 @@ public class WarehouseConfiguration implements WebMvcConfigurer {
     @Bean
     public GetProductUseCase getProductUseCase(ProductReader productReader) {
         return PRODUCT_SERVICE_FACTORY.create(productReader);
+    }
+
+    @Bean
+    public InvalidateProductsUseCase invalidateProductsUseCase(ProductsEventsPublisher productsEventsPublisher) {
+        return new InvalidateProductsService(productsEventsPublisher);
     }
 
     @Override

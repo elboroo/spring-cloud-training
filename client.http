@@ -81,3 +81,9 @@ Content-Type: application/json
 GET http://localhost:10001/products/1
 Accept: application/json
 Content-Type: application/json
+
+###
+
+DELETE http://localhost:10001/products/active
+Accept: application/json
+Content-Type: application/json
