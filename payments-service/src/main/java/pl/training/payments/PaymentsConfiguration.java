@@ -1,10 +1,12 @@
-package pl.training.shop.payments;
+package pl.training.payments;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import pl.training.payments.domain.DefaultPaymentServiceFactory;
 import pl.training.payments.ports.*;
 
+@EnableJpaRepositories
 @Configuration
 public class PaymentsConfiguration {
 

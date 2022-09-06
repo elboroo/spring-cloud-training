@@ -1,4 +1,4 @@
-package pl.training.shop.commons.aop;
+package pl.training.payments;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

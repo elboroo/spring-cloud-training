@@ -1,10 +1,9 @@
-package pl.training.shop.payments;
+package pl.training.payments;
 
 import lombok.RequiredArgsConstructor;
 import pl.training.payments.ports.Payment;
 import pl.training.payments.ports.PaymentRequest;
 import pl.training.payments.ports.ProcessPaymentUseCase;
-import pl.training.shop.commons.aop.TransactionalProxy;
 
 @TransactionalProxy
 @RequiredArgsConstructor

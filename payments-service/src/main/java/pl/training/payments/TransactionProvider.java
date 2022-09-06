@@ -1,4 +1,4 @@
-package pl.training.shop.commons.aop;
+package pl.training.payments;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
