@@ -11,11 +11,11 @@ spring:
     password: admin
 logging:
   level:
-    pl.training.shop: DEBUG
+    pl.training: DEBUG
 feign:
   client:
     config:
-      warehouse:
-        logger-level: headers
+      default:
+        logger-level: BASIC
 api:
   products: http://WAREHOUSE-SERVICE/products/
