@@ -7,4 +7,4 @@ spring:
     import: optional:configserver:http://localhost:8888
   cloud:
     config:
-      label: master
+      label: 005-Configuration-updates
