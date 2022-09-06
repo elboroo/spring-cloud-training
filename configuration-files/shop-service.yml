@@ -1,6 +1,0 @@
-spring:
-  jpa:
-    open-in-view: false
-    generate-ddl: true
-  messages:
-    basename: exceptions
