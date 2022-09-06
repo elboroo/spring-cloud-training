@@ -15,7 +15,7 @@ logging:
 feign:
   client:
     config:
-      default:
+      warehouse:
         logger-level: headers
 api:
   products: http://WAREHOUSE-SERVICE/products/
