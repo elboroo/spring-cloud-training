@@ -1,10 +1,10 @@
 package pl.training.shop.products;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 public class ProductEventDto {
 
-    String description;
+    private String description;
 
 }
