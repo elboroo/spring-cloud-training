@@ -10,4 +10,4 @@ spring:
     username: admin
     password: admin
 api:
-  product: http://WAREHOUSE-SERVICE/products/
+  products: http://WAREHOUSE-SERVICE/products/
