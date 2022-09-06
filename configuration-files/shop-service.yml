@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    function:
+      definition: productsEvents
+    stream:
+      bindings:
+        productsEvents-in-0:
+          destination: products-events
+          group: shop
