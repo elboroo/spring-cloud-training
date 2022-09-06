@@ -8,8 +8,8 @@ public class DefaultOrderServiceFactory implements OrderServiceFactory {
     private static final OrderDomainMapper MAPPER = Mappers.getMapper(OrderDomainMapper.class);
 
     @Override
-    public PlaceOrderUseCase create(PaymentService paymentService, ProductsProvider productsProvider, DiscountCalculator discountCalculator) {
-        var placeOrderService = new PlaceOrderService(paymentService, discountCalculator);
+    public PlaceOrderUseCase create(PaymentService paymentService, ProductsProvider productsProvider, DiscountCalculator discountCalculator, OrdersEventPublisher ordersEventPublisher) {
+        var placeOrderService = new PlaceOrderService(paymentService, discountCalculator, ordersEventPublisher);
         MAPPER.setProductsProvider(productsProvider);
         return new PlaceOrderUseCaseAdapter(placeOrderService, MAPPER);
     }

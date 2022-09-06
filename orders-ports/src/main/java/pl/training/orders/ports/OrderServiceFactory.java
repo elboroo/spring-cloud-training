@@ -2,6 +2,6 @@ package pl.training.orders.ports;
 
 public interface OrderServiceFactory {
 
-    PlaceOrderUseCase create(PaymentService paymentService, ProductsProvider productsProvider, DiscountCalculator discountCalculator);
+    PlaceOrderUseCase create(PaymentService paymentService, ProductsProvider productsProvider, DiscountCalculator discountCalculator, OrdersEventPublisher ordersEventPublisher);
 
 }
