@@ -68,3 +68,17 @@ services:
       ELASTICSEARCH_URL: http://elastic:9300
     ports:
       - "5601:5601"
+  keycloak:
+    image: quay.io/keycloak/keycloak:19.0.0
+    command:
+      - start-dev
+    ports:
+      - "8100:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      DB_VENDOR: "POSTGRES"
+      DB_ADDR: "database"
+      DB_USER: "admin"
+      DB_PASSWORD: "admin"
+      DB_DATABASE: "shop"
