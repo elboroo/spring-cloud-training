@@ -101,7 +101,26 @@ path=shop-service
 POST http://localhost:10003/payments
 Accept: application/json
 Content-Type: application/json
+Authorization: bearer {{ token }}
 
 {
   "value": "100 PLN"
 }
+
+###
+// @no-cookie-jar
+POST http://localhost:8100/realms/shop/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=shop-client&username=jan&password=123&grant_type=password
+
+> {% client.global.set("token", response.body.access_token) %}
+
+###
+// @no-cookie-jar
+POST http://localhost:8100/realms/shop/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=shop-client&grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0YjViODhlZS1hMTM3LTRiNzYtYWEyMi1jNjY1ZTdiYjVjMzYifQ.eyJleHAiOjE2NjI1NjE0NzIsImlhdCI6MTY2MjU1OTY3MiwianRpIjoiYWU1YTM0YTktMWIwNy00Y2QyLTliYmQtMmIxNTAzMzk5MjQxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTAwL3JlYWxtcy9zaG9wIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MTAwL3JlYWxtcy9zaG9wIiwic3ViIjoiMzdmNGExM2ItMTA5Mi00Njg3LTk2MDAtZjFkMjYzMWUxY2Y0IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6InNob3AtY2xpZW50Iiwic2Vzc2lvbl9zdGF0ZSI6IjU0ZWExMzc4LWY0MjktNDQwNi05YWViLTRjMTFiZjdjMDg0OCIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjU0ZWExMzc4LWY0MjktNDQwNi05YWViLTRjMTFiZjdjMDg0OCJ9.n0MhvNIfDtFesI0acE5TiaVjalhntB3cqBOvpIPurTw
+
+> {% client.global.set("token", response.body.access_token) %}

@@ -19,3 +19,5 @@ management:
     web:
       exposure:
         include: '*'
+keycloak:
+  auth-server-url: http://localhost:8100

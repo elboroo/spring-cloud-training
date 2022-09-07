@@ -1,6 +1,7 @@
 package pl.training.shop;
 
 import lombok.extern.java.Log;
+import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
@@ -46,6 +47,11 @@ public class ShopConfiguration implements WebMvcConfigurer {
             log.info("Products event received: " + productEventDto);
             cacheManager.getCache("products").clear();
         };
+    }
+
+    @Bean
+    public KeycloakSpringBootConfigResolver keycloakSpringBootConfigResolver() {
+        return new KeycloakSpringBootConfigResolver();
     }
 
 }

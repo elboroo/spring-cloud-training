@@ -4,3 +4,7 @@ spring:
 logging:
   level:
     org.javamoney.moneta.FastMoney: OFF
+keycloak:
+  realm: shop
+  resource: shop-client
+  public-client: true
