@@ -1,6 +1,6 @@
 spring:
   application:
-    name: discovery-server
+    name: broker-service
   profiles:
     active: development
   config:
