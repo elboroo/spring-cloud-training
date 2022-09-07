@@ -20,10 +20,12 @@ Accept: application/json
 Content-Type: application/json
 
 ###
-
+// @no-cookie-jar
+// @no-redirect
 POST http://localhost:10000/orders
 Accept: application/json
 Content-Type: application/json
+Authorization: bearer {{ token }}
 
 {
   "id": 1,
