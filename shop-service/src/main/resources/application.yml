@@ -1,12 +1,17 @@
 spring:
   application:
     name: shop-service
-  profiles:
-    active: development
-  config:
-    import: optional:configserver:http://localhost:8888
+#  profiles:
+#    active: development
+#  config:
+#    import: optional:configserver:http://localhost:8888
   cloud:
     config:
       label: master
+      fail-fast: true
+eureka:
+  client:
+    #eureka-server-connect-timeout-seconds: 3600
+    should-enforce-registration-at-init: true
 encrypt:
   key: YWMMEHRICKEU

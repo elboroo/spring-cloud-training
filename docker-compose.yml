@@ -160,12 +160,25 @@ services:
       PROFILE: production
       CONFIGURATION_SERVER: optional:configserver:http://configuration-server:8888
   shop-service:
-    image: training/payments-service
+    image: training/shop-service
     restart: always
     environment:
       PROFILE: production
       CONFIGURATION_SERVER: optional:configserver:http://configuration-server:8888
-
+  registry-server:
+    image: registry
+    restart: always
+    container_name: registry
+    ports:
+      - "5000:5000"
+  portainer:
+    image: portainer/portainer-ce
+    restart: always
+    ports:
+      - "10005:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/portainer:/data
 
 
 
