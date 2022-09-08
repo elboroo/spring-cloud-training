@@ -109,6 +109,11 @@
             <artifactId>keycloak-spring-boot-starter</artifactId>
             <version>19.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.7.0</version>
+        </dependency>
     </dependencies>
 
 </project>

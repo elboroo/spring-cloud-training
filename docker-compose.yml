@@ -73,8 +73,6 @@ services:
       logstash -f /etc/logstash/conf.d/logstash.conf
     volumes:
       - ./configuration-files/logstash.conf:/etc/logstash/conf.d/logstash.conf
-    ports:
-      - "5000:5000"
   kibana-server:
     image: docker.elastic.co/kibana/kibana:7.14.1
     restart: always
@@ -165,12 +163,12 @@ services:
     environment:
       PROFILE: production
       CONFIGURATION_SERVER: optional:configserver:http://configuration-server:8888
-  registry-server:
-    image: registry
-    restart: always
-    container_name: registry
-    ports:
-      - "5000:5000"
+#  registry-server:
+#    image: registry
+#    restart: always
+#    container_name: registry
+#    ports:
+#      - "5000:5000"
   portainer:
     image: portainer/portainer-ce
     restart: always
