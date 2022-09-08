@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      username: admin
+      password: admin
+      port: 27017
+      database: payments
+      authentication-database: admin

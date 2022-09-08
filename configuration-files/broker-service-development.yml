@@ -3,9 +3,4 @@ server:
 spring:
   data:
     mongodb:
-      username: admin
-      password: admin
-      port: 27017
       host: localhost
-      database: payments
-      authentication-database: admin
