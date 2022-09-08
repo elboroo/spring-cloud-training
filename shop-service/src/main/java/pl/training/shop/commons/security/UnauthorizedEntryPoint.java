@@ -1,4 +1,4 @@
-package pl.training.shop.commons;
+package pl.training.shop.commons.security;
 
 import org.keycloak.adapters.AdapterDeploymentContext;
 import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationEntryPoint;

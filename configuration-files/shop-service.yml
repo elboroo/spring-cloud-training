@@ -9,4 +9,4 @@ spring:
           group: shop
         orders-out-0:
           destination: orders-events
-discountValue: 3 PLN
+discountValue: "{cipher}90e4983ae497587dac34ac2937a16a3e3906f5ca3b797eb3bc715baafdb8a1b5"

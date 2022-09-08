@@ -1,4 +1,4 @@
-package pl.training.shop;
+package pl.training.payments;
 
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
@@ -15,7 +15,6 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import pl.training.shop.commons.security.UnauthorizedEntryPoint;
 
 import java.util.List;
 
