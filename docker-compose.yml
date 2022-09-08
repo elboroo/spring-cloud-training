@@ -146,7 +146,13 @@ services:
     environment:
       PROFILE: production
       CONFIGURATION_SERVER: optional:configserver:http://configuration-server:8888
-
+      MONGO_INITDB_ROOT_DATABASE: "payments"
+  warehouse-service:
+    image: training/warehouse-service
+    restart: always
+    environment:
+      PROFILE: production
+      CONFIGURATION_SERVER: optional:configserver:http://configuration-server:8888
 
 
 

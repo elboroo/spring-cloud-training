@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-server:5432/training
+    username: admin
+    password: admin
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka-server:9092
