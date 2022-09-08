@@ -47,10 +47,10 @@ public class SecurityConfiguration extends KeycloakWebSecurityConfigurerAdapter 
         return source;
     }
 
-    @Override
+   /* @Override
     protected AuthenticationEntryPoint authenticationEntryPoint() throws Exception {
         return new UnauthorizedEntryPoint(adapterDeploymentContext());
-    }
+    }*/
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
