@@ -8,6 +8,3 @@ feign:
     config:
       default:
         logger-level: BASIC
-api:
-  products: http://WAREHOUSE-SERVICE/products/
-  payments: http://PAYMENTS-SERVICE/payments/

@@ -24,3 +24,6 @@ resilience4j:
       products:
       retry-exception:
         - java.lang.Exception
+api:
+  products: http://WAREHOUSE-SERVICE/products/
+  payments: http://PAYMENTS-SERVICE/payments/

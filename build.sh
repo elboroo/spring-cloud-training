@@ -6,4 +6,4 @@ docker build -t training/gateway-server gateway-server
 docker build -t training/broker-service broker-service
 docker build -t training/warehouse-service warehouse-service
 docker build -t training/payments-service payments-service
-#docker build -t training/shop-service shop-service
+docker build -t training/shop-service shop-service
