@@ -10,3 +10,17 @@ spring:
         orders-out-0:
           destination: orders-events
 discountValue: "{cipher}90e4983ae497587dac34ac2937a16a3e3906f5ca3b797eb3bc715baafdb8a1b5"
+resilience4j:
+  retry:
+    instance:
+      products:
+        maxRetryAttempts: 3
+        waitDuration: 5000
+        retry-exception:
+          - java.lang.Exception
+  circuitbreaker:
+    instance:
+      waitDurationInOpenState: 10s
+      products:
+      retry-exception:
+        - java.lang.Exception
